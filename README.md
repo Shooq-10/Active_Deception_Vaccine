@@ -154,6 +154,3 @@ To restore your Linux core environment back to its native condition:
 ## 📄 License & Disclaimer
 
 This tool is built strictly for educational, defensive research, and system immunization purposes.
-
-```
-
