@@ -1,5 +1,5 @@
 # Active_Deception_Vaccine
-# 💉 VAXBOX v4.0: Next-Gen Malware Vaccine & Cyber Deception Tool
+# 💉 VAXBOX : Malware Vaccine & Cyber Deception Tool
 
 VAXBOX is an advanced pro-active defense tool developed in Python for Linux (Kali Linux Cores). It implements **Cyber Deception** and **Hardware Gaslighting** to trick advanced malware into self-destruction by spoofing multi-layered sandbox environments and anti-analysis indicators (IoCs).
 
