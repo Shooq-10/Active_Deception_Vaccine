@@ -16,8 +16,6 @@ Instead of traditional reactive defense (chasing malware after infection), this 
 
 This project utilizes native system APIs and network utility suites to maintain a zero-dependency footprint:
 * **Python 3:** Core logic architecture and CLI administration menu.
-* **Linux Kernel Shared Memory (`/dev/shm`):** Host memory mapping for threat-intelligence mutex injection.
-* **POSIX Semaphores:** Operating system locks for process behavior modification.
 * **Ncat / Netcat:** Network utility engine used to host the external attacker listener session.
 
 ---
