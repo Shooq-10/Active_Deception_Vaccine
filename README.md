@@ -157,7 +157,3 @@ This tool is built strictly for educational, defensive research, and system immu
 
 ```
 
----
-الآن ترتيب الصفحة يتبع الـ Best Practices الرسمية في GitHub، الخطوات تبدأ بالتثبيت ثم استعراض الميزات وتنتهي بالمعمل التطبيقي والمطور، التنسيق طالع فخم ومريح جداً للقراءة! 🚀🛡️✨
-
-```
